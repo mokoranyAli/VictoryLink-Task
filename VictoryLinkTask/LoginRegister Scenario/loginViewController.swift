@@ -61,6 +61,8 @@ class loginViewController: UIViewController , AlertViewDelegate  {
     
     @IBAction func didLoginPressed(_ sender: Any) {
         
+        showActivityIndicator()
+        
         guard let user = self.username.text else { return  }
                    guard let pass = self.password.text else { return  }
         do {
@@ -68,10 +70,13 @@ class loginViewController: UIViewController , AlertViewDelegate  {
             try self.validate(username: user ) {
                 print($0)
                 
+                
+                self.hideActivityIndicator()
+                
             }
 
            } catch {
-
+            hideActivityIndicator()
             AlertView.showAlert(message: error.localizedDescription, button: "ok", delegate: self, container: self, image: UIImage(named: "warning"))
             return
            }
@@ -82,11 +87,12 @@ class loginViewController: UIViewController , AlertViewDelegate  {
                     guard let mySelf = self else{return}
                     
                     if let error = error {
+                        mySelf.hideActivityIndicator()
                       AlertView.showAlert(message: error.localizedDescription, button: "ok", delegate: self, container: mySelf, image: UIImage(named: "warning"))
                         return
                     }
                     
-                   
+                    mySelf.hideActivityIndicator()
                     mySelf.showHomeScreen()
                              
                    

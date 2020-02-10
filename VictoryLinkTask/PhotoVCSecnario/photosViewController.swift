@@ -19,6 +19,11 @@ func updateLatLong(lat:Double , long:Double)
 
 class photosViewController: UIViewController , LatLongDelegate{
   
+    fileprivate let Manger = FlickerAPI()
+    fileprivate var searchPhotos = [Photo]()
+    fileprivate let imageProvider = ImageProvider()
+    fileprivate var pageCount = 0
+
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -35,9 +40,45 @@ class photosViewController: UIViewController , LatLongDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       showActivityIndicator()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
+        fetchSearchImages()
+        
+        
+        
+    }
+    
+    
+    func fetchSearchImages(){
+                pageCount+=1   //Count increment here
+        
+        
+        
+        
+        Manger.requestFor(searchType: .Coordinates(lat: self.lat!, long: self.long!), with: 1, decode: { json -> Photos? in
+            guard let flickerResult = json as? Photos else { return  nil }
+            return flickerResult
+        }) { [unowned self] result in
+            DispatchQueue.main.async {
+                
+                switch result{
+                case .success(let value):
+                  // print(value)
+                    
+                    self.searchPhotos = value.photos.photo
+                    self.collectionView.reloadData()
+                    self.hideActivityIndicator()
+                    
+                case .failure(let error):
+                    print(error.debugDescription)
+                    guard self.Manger.requestCancelStatus == false else { return }
+                    
+                }
+            }
+        }
     }
 
 }
@@ -66,15 +107,36 @@ extension photosViewController: UICollectionViewDelegateFlowLayout {
 extension photosViewController: UICollectionViewDataSource, RequestImages{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        
+        return self.searchPhotos.count ?? 0
        
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectioncell", for: indexPath) as! PhotoCell
-        
-       
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+                guard searchPhotos.count != 0 else {
+                    return cell
+                }
+                let model = searchPhotos[indexPath.row]
+                guard let mediaUrl = model.getImagePath() else {
+                    return cell
+                }
+                //print(model.owner)
+                print(model.title)
+                print(model.owner)
+               
+                
+                let image = imageProvider.cache.object(forKey: URL(string: mediaUrl)! as NSURL)
+               cell.imageResult.backgroundColor = UIColor(white: 0.95, alpha: 1)
+                cell.imageResult.image = image
+                if image == nil {
+                    imageProvider.requestImage(from :URL(string: mediaUrl)!, completion: { image -> Void in
+                        let indexPath_ = collectionView.indexPath(for: cell)
+                        if indexPath == indexPath_ {
+                            cell.imageResult.image = image
+                        }
+                    })
+                }
         return cell
     }
     

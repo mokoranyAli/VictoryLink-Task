@@ -10,9 +10,11 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import AnAlertView
+import FirebaseStorage
 
 class registerViewController: UIViewController  , AlertViewDelegate{
     
+    @IBOutlet weak var profileImageView: UIImageView!
     var ref: DatabaseReference!
     @IBOutlet weak var email: DesignableUITextField!
     @IBOutlet weak var userName: DesignableUITextField!
@@ -29,6 +31,10 @@ class registerViewController: UIViewController  , AlertViewDelegate{
         repeatedPassword.text = ""
     }
     
+    @IBAction func addNewPhoto(_ sender: Any) {
+        
+        handleSelectProfileImageView()
+    }
     func showErrorAlert(error: String) {
         AlertView.showAlert(message: error, button: "ok", delegate: self, container: self, image: UIImage(named: "warning"))
     }
@@ -76,6 +82,7 @@ class registerViewController: UIViewController  , AlertViewDelegate{
                 else {
                     
                     
+                    
                     mySelf.ref.child("data/users").updateChildValues(["\(Auth.auth().currentUser!.uid)":["Email":mySelf.email.text ,"Username":mySelf.userName.text]])
                     mySelf.hideActivityIndicator()
                     
@@ -93,9 +100,77 @@ class registerViewController: UIViewController  , AlertViewDelegate{
         }
     }
     
+    
+    
+    fileprivate func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
+           let ref = Database.database().reference()
+           let usersReference = ref.child("users").child(uid)
+           
+           usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+               
+               if let err = err {
+                   print(err)
+                   return
+               }
+               
+               self.dismiss(animated: true, completion: nil)
+           })
+       }
+    
+    
+    
+    
     func showHomePage() {
         
          let home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(homeViewController.self)") as! homeViewController
         self.navigationController?.pushViewController(home, animated: true)
     }
+}
+
+
+
+extension registerViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
+      func handleSelectProfileImageView() {
+            let picker = UIImagePickerController()
+            
+            picker.delegate = self
+            picker.allowsEditing = true
+            
+            present(picker, animated: true, completion: nil)
+        }
+        
+       
+        
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+            // Local variable inserted by Swift 4.2 migrator.
+            let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+            
+            
+            var selectedImageFromPicker: UIImage?
+            
+            if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+                selectedImageFromPicker = editedImage
+            } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+                
+                selectedImageFromPicker = originalImage
+            }
+            
+            if let selectedImage = selectedImageFromPicker {
+                profileImageView.image = selectedImage
+            }
+            
+            dismiss(animated: true, completion: nil)
+            
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            print("canceled picker")
+            dismiss(animated: true, completion: nil)
+        }
+        
+    fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [String: Any]) -> [String: Any] {
+        return Dictionary(uniqueKeysWithValues: input.map {result in (result.key, result.value)})
+    }
+
 }

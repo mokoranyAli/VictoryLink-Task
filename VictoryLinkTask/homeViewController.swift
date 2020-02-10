@@ -7,24 +7,57 @@
 //
 
 import UIKit
+import MapKit
 
 class homeViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var mapView: MKMapView!
+    var photoVCDelegate:LatLongDelegate?
+    
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        
+        showSearchController()
+        
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+         self.navigationController?.isToolbarHidden = false
+        let menu = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action:#selector(didMenuSelected))
+        self.navigationItem.leftBarButtonItem  = menu
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        self.navigationItem.setHidesBackButton(true, animated: true);
+        
+        mapView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(didLongpressed(sender:))))
     }
-    */
-
+    
+    @objc func didMenuSelected() {
+        print("handle menu")
+    }
+    
+    
+    @objc func didLongpressed(sender: UILongPressGestureRecognizer) {
+        if sender.state != UIGestureRecognizer.State.began { return }
+        let touchLocation = sender.location(in: mapView)
+        let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
+        let annotation = MKPointAnnotation()
+           annotation.coordinate = locationCoordinate
+           mapView.addAnnotation(annotation)
+        
+        let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(photosViewController.self)") as! photosViewController
+        self.photoVCDelegate = vc 
+        self.photoVCDelegate?.updateLatLong(lat: locationCoordinate.latitude, long: locationCoordinate.longitude)
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    func showSearchController() {
+        let searchController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(searchViewController.self)") as! searchViewController
+        
+        self.present(searchController, animated: true, completion: nil)
+    }
+    
+    
 }

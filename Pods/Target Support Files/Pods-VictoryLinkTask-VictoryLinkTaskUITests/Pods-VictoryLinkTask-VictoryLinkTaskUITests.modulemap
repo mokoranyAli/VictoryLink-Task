@@ -1,0 +1,6 @@
+framework module Pods_VictoryLinkTask_VictoryLinkTaskUITests {
+  umbrella header "Pods-VictoryLinkTask-VictoryLinkTaskUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

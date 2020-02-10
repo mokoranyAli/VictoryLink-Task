@@ -1,0 +1,6 @@
+framework module AnAlertView {
+  umbrella header "AnAlertView-umbrella.h"
+
+  export *
+  module * { export * }
+}

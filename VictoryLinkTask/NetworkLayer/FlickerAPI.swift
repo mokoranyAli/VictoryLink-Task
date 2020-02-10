@@ -1,6 +1,6 @@
 //
 //  FlickerAPI.swift
-//  Get Photos By Location
+//  VictoryLinkTask
 //
 //  Created by Mohamed Korany Ali on 2/10/20.
 //  Copyright © 2020 Mohamed Korany Ali. All rights reserved.
@@ -19,6 +19,7 @@ class FlickerAPI{
     
     fileprivate let flickrKey = "a0ec4ce570ff652cdf19e3ffc5519912"
     var requestCancelStatus = false
+    
     
     enum Result<value>{
         case success(value)
