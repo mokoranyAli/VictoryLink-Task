@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8762CC0823F18CD600ECEF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762CC0723F18CD600ECEF4E /* AppDelegate.swift */; };
+		8762CC0A23F18CD600ECEF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762CC0923F18CD600ECEF4E /* SceneDelegate.swift */; };
+		8762CC0C23F18CD600ECEF4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762CC0B23F18CD600ECEF4E /* ViewController.swift */; };
+		8762CC0F23F18CD600ECEF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8762CC0D23F18CD600ECEF4E /* Main.storyboard */; };
+		8762CC1123F18CD900ECEF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8762CC1023F18CD900ECEF4E /* Assets.xcassets */; };
+		8762CC1423F18CD900ECEF4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8762CC1223F18CD900ECEF4E /* LaunchScreen.storyboard */; };
+		8762CC1F23F18CD900ECEF4E /* VictoryLinkTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762CC1E23F18CD900ECEF4E /* VictoryLinkTaskTests.swift */; };
+		8762CC2A23F18CD900ECEF4E /* VictoryLinkTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762CC2923F18CD900ECEF4E /* VictoryLinkTaskUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8762CC1B23F18CD900ECEF4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8762CBFC23F18CD600ECEF4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8762CC0323F18CD600ECEF4E;
+			remoteInfo = VictoryLinkTask;
+		};
+		8762CC2623F18CD900ECEF4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8762CBFC23F18CD600ECEF4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8762CC0323F18CD600ECEF4E;
+			remoteInfo = VictoryLinkTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8762CC0423F18CD600ECEF4E /* VictoryLinkTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VictoryLinkTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8762CC0723F18CD600ECEF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8762CC0923F18CD600ECEF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8762CC0B23F18CD600ECEF4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8762CC0E23F18CD600ECEF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8762CC1023F18CD900ECEF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8762CC1323F18CD900ECEF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8762CC1523F18CD900ECEF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8762CC1A23F18CD900ECEF4E /* VictoryLinkTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VictoryLinkTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8762CC1E23F18CD900ECEF4E /* VictoryLinkTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryLinkTaskTests.swift; sourceTree = "<group>"; };
+		8762CC2023F18CD900ECEF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8762CC2523F18CD900ECEF4E /* VictoryLinkTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VictoryLinkTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8762CC2923F18CD900ECEF4E /* VictoryLinkTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryLinkTaskUITests.swift; sourceTree = "<group>"; };
+		8762CC2B23F18CD900ECEF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8762CC0123F18CD600ECEF4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762CC1723F18CD900ECEF4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762CC2223F18CD900ECEF4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8762CBFB23F18CD600ECEF4E = {
+			isa = PBXGroup;
+			children = (
+				8762CC0623F18CD600ECEF4E /* VictoryLinkTask */,
+				8762CC1D23F18CD900ECEF4E /* VictoryLinkTaskTests */,
+				8762CC2823F18CD900ECEF4E /* VictoryLinkTaskUITests */,
+				8762CC0523F18CD600ECEF4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8762CC0523F18CD600ECEF4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8762CC0423F18CD600ECEF4E /* VictoryLinkTask.app */,
+				8762CC1A23F18CD900ECEF4E /* VictoryLinkTaskTests.xctest */,
+				8762CC2523F18CD900ECEF4E /* VictoryLinkTaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8762CC0623F18CD600ECEF4E /* VictoryLinkTask */ = {
+			isa = PBXGroup;
+			children = (
+				8762CC0723F18CD600ECEF4E /* AppDelegate.swift */,
+				8762CC0923F18CD600ECEF4E /* SceneDelegate.swift */,
+				8762CC0B23F18CD600ECEF4E /* ViewController.swift */,
+				8762CC0D23F18CD600ECEF4E /* Main.storyboard */,
+				8762CC1023F18CD900ECEF4E /* Assets.xcassets */,
+				8762CC1223F18CD900ECEF4E /* LaunchScreen.storyboard */,
+				8762CC1523F18CD900ECEF4E /* Info.plist */,
+			);
+			path = VictoryLinkTask;
+			sourceTree = "<group>";
+		};
+		8762CC1D23F18CD900ECEF4E /* VictoryLinkTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				8762CC1E23F18CD900ECEF4E /* VictoryLinkTaskTests.swift */,
+				8762CC2023F18CD900ECEF4E /* Info.plist */,
+			);
+			path = VictoryLinkTaskTests;
+			sourceTree = "<group>";
+		};
+		8762CC2823F18CD900ECEF4E /* VictoryLinkTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8762CC2923F18CD900ECEF4E /* VictoryLinkTaskUITests.swift */,
+				8762CC2B23F18CD900ECEF4E /* Info.plist */,
+			);
+			path = VictoryLinkTaskUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8762CC0323F18CD600ECEF4E /* VictoryLinkTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8762CC2E23F18CDA00ECEF4E /* Build configuration list for PBXNativeTarget "VictoryLinkTask" */;
+			buildPhases = (
+				8762CC0023F18CD600ECEF4E /* Sources */,
+				8762CC0123F18CD600ECEF4E /* Frameworks */,
+				8762CC0223F18CD600ECEF4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VictoryLinkTask;
+			productName = VictoryLinkTask;
+			productReference = 8762CC0423F18CD600ECEF4E /* VictoryLinkTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8762CC1923F18CD900ECEF4E /* VictoryLinkTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8762CC3123F18CDA00ECEF4E /* Build configuration list for PBXNativeTarget "VictoryLinkTaskTests" */;
+			buildPhases = (
+				8762CC1623F18CD900ECEF4E /* Sources */,
+				8762CC1723F18CD900ECEF4E /* Frameworks */,
+				8762CC1823F18CD900ECEF4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8762CC1C23F18CD900ECEF4E /* PBXTargetDependency */,
+			);
+			name = VictoryLinkTaskTests;
+			productName = VictoryLinkTaskTests;
+			productReference = 8762CC1A23F18CD900ECEF4E /* VictoryLinkTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8762CC2423F18CD900ECEF4E /* VictoryLinkTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8762CC3423F18CDA00ECEF4E /* Build configuration list for PBXNativeTarget "VictoryLinkTaskUITests" */;
+			buildPhases = (
+				8762CC2123F18CD900ECEF4E /* Sources */,
+				8762CC2223F18CD900ECEF4E /* Frameworks */,
+				8762CC2323F18CD900ECEF4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8762CC2723F18CD900ECEF4E /* PBXTargetDependency */,
+			);
+			name = VictoryLinkTaskUITests;
+			productName = VictoryLinkTaskUITests;
+			productReference = 8762CC2523F18CD900ECEF4E /* VictoryLinkTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8762CBFC23F18CD600ECEF4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Mohamed Korany Ali";
+				TargetAttributes = {
+					8762CC0323F18CD600ECEF4E = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					8762CC1923F18CD900ECEF4E = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 8762CC0323F18CD600ECEF4E;
+					};
+					8762CC2423F18CD900ECEF4E = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 8762CC0323F18CD600ECEF4E;
+					};
+				};
+			};
+			buildConfigurationList = 8762CBFF23F18CD600ECEF4E /* Build configuration list for PBXProject "VictoryLinkTask" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8762CBFB23F18CD600ECEF4E;
+			productRefGroup = 8762CC0523F18CD600ECEF4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8762CC0323F18CD600ECEF4E /* VictoryLinkTask */,
+				8762CC1923F18CD900ECEF4E /* VictoryLinkTaskTests */,
+				8762CC2423F18CD900ECEF4E /* VictoryLinkTaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8762CC0223F18CD600ECEF4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762CC1423F18CD900ECEF4E /* LaunchScreen.storyboard in Resources */,
+				8762CC1123F18CD900ECEF4E /* Assets.xcassets in Resources */,
+				8762CC0F23F18CD600ECEF4E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762CC1823F18CD900ECEF4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762CC2323F18CD900ECEF4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8762CC0023F18CD600ECEF4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762CC0C23F18CD600ECEF4E /* ViewController.swift in Sources */,
+				8762CC0823F18CD600ECEF4E /* AppDelegate.swift in Sources */,
+				8762CC0A23F18CD600ECEF4E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762CC1623F18CD900ECEF4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762CC1F23F18CD900ECEF4E /* VictoryLinkTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762CC2123F18CD900ECEF4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762CC2A23F18CD900ECEF4E /* VictoryLinkTaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8762CC1C23F18CD900ECEF4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8762CC0323F18CD600ECEF4E /* VictoryLinkTask */;
+			targetProxy = 8762CC1B23F18CD900ECEF4E /* PBXContainerItemProxy */;
+		};
+		8762CC2723F18CD900ECEF4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8762CC0323F18CD600ECEF4E /* VictoryLinkTask */;
+			targetProxy = 8762CC2623F18CD900ECEF4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8762CC0D23F18CD600ECEF4E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8762CC0E23F18CD600ECEF4E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8762CC1223F18CD900ECEF4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8762CC1323F18CD900ECEF4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8762CC2C23F18CDA00ECEF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8762CC2D23F18CDA00ECEF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8762CC2F23F18CDA00ECEF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65BYK5SR4J;
+				INFOPLIST_FILE = VictoryLinkTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RM.VictoryLinkTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8762CC3023F18CDA00ECEF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65BYK5SR4J;
+				INFOPLIST_FILE = VictoryLinkTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RM.VictoryLinkTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8762CC3223F18CDA00ECEF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65BYK5SR4J;
+				INFOPLIST_FILE = VictoryLinkTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RM.VictoryLinkTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VictoryLinkTask.app/VictoryLinkTask";
+			};
+			name = Debug;
+		};
+		8762CC3323F18CDA00ECEF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65BYK5SR4J;
+				INFOPLIST_FILE = VictoryLinkTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RM.VictoryLinkTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VictoryLinkTask.app/VictoryLinkTask";
+			};
+			name = Release;
+		};
+		8762CC3523F18CDA00ECEF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65BYK5SR4J;
+				INFOPLIST_FILE = VictoryLinkTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RM.VictoryLinkTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VictoryLinkTask;
+			};
+			name = Debug;
+		};
+		8762CC3623F18CDA00ECEF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65BYK5SR4J;
+				INFOPLIST_FILE = VictoryLinkTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RM.VictoryLinkTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VictoryLinkTask;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8762CBFF23F18CD600ECEF4E /* Build configuration list for PBXProject "VictoryLinkTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8762CC2C23F18CDA00ECEF4E /* Debug */,
+				8762CC2D23F18CDA00ECEF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8762CC2E23F18CDA00ECEF4E /* Build configuration list for PBXNativeTarget "VictoryLinkTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8762CC2F23F18CDA00ECEF4E /* Debug */,
+				8762CC3023F18CDA00ECEF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8762CC3123F18CDA00ECEF4E /* Build configuration list for PBXNativeTarget "VictoryLinkTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8762CC3223F18CDA00ECEF4E /* Debug */,
+				8762CC3323F18CDA00ECEF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8762CC3423F18CDA00ECEF4E /* Build configuration list for PBXNativeTarget "VictoryLinkTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8762CC3523F18CDA00ECEF4E /* Debug */,
+				8762CC3623F18CDA00ECEF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8762CBFC23F18CD600ECEF4E /* Project object */;
+}
